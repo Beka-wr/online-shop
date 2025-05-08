@@ -30,7 +30,7 @@
 
         h1 {
             margin-top: 50px;
-            margin-button: 10px;
+            margin-bottom: 10px;
         }
 
         img {
@@ -44,7 +44,7 @@
         }
 
         button {
-            boder: 0;
+            border: 0;
             border-radius: 5px;
             margin-top: 50px;
             height: 60px;
@@ -101,11 +101,11 @@
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
-        tg.expend();
+        tg.expand();
 
         buy.addEventListener("click", ()=> {
-            document.getElementById("main").style.dysplay = "none";
-            document.getElementById("form").style.dysplay = "block";
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display= "block";
             document.getElementById("user_name").value= tg.initDataUnsafe.user.first_name + " "+ tg.initDataUnsafe.user.last_name
         });
 
@@ -120,7 +120,7 @@
             }
             if(email.length < 5){
                 document.getElementById("error").innerText = 'Ошибка в email';
-                returm
+                return;
             }
             if(phone.length < 5){
                 document.getElementById("error").innerText = 'Ошибка в номере телефона';
